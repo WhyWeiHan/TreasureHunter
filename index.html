@@ -22,7 +22,6 @@
 			var h;
 
 			if (scaleToFit) {
-				console.log("Scale To Fit");
 				w = window.innerWidth;
 				h = window.innerHeight;
 
@@ -33,13 +32,14 @@
 				}
 				h = Math.floor(w * r);
 			} else {
-				console.log("Preset Resolution");
 				w = 720;
 				h = 1280;
 			}
 
-			container.style.width = canvas.style.width = 100 + "%";
-			container.style.height = canvas.style.height = 100 + "%";
+			container.style.width = canvas.style.width = w + "px";
+			container.style.height = canvas.style.height = h + "px";
+			container.style.top = Math.floor((window.innerHeight - h) / 2) + "px";
+			container.style.left = Math.floor((window.innerWidth - w) / 2) + "px";
 		}
 		window.addEventListener('resize', onResize);
 	</script>
