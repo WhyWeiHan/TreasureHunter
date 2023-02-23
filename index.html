@@ -22,6 +22,7 @@
 			var h;
 
 			if (scaleToFit) {
+				console.log("Scale To Fit");
 				w = window.innerWidth;
 				h = window.innerHeight;
 
@@ -32,6 +33,7 @@
 				}
 				h = Math.floor(w * r);
 			} else {
+				console.log("Preset Resolution");
 				w = 720;
 				h = 1280;
 			}
