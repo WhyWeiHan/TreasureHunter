@@ -10,7 +10,7 @@
 		var gameInstance = UnityLoader.instantiate("gameContainer", "Build/TreasureHunter_V1.0(4).json");
 		var scaleToFit;
 		try {
-			scaleToFit = !!JSON.parse("");
+			scaleToFit = !!JSON.parse("true");
 		} catch (e) {
 			scaleToFit = true;
 		}
@@ -32,11 +32,8 @@
 				}
 				h = Math.floor(w * r);
 			} else {
-				<!-- w = 720; -->
-				<!-- h = 1280; -->
-				
-				w = window.innerWidth;
-				h = window.innerHeight;
+				w = 720;
+				h = 1280;
 			}
 
 			container.style.width = canvas.style.width = w + "px";
