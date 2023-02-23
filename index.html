@@ -36,10 +36,8 @@
 				h = 1280;
 			}
 
-			container.style.width = canvas.style.width = w + "px";
-			container.style.height = canvas.style.height = h + "px";
-			container.style.top = Math.floor((window.innerHeight - h) / 2) + "px";
-			container.style.left = Math.floor((window.innerWidth - w) / 2) + "px";
+			container.style.width = canvas.style.width = 100 + "%";
+			container.style.height = canvas.style.height = 100 + "%";
 		}
 		window.addEventListener('resize', onResize);
 	</script>
