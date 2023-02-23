@@ -4,10 +4,10 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>TreasureHunter</title>
+	<title>Treasure Hunter</title>
 	<script src="Build/UnityLoader.js"></script>
 	<script>
-		var gameInstance = UnityLoader.instantiate("gameContainer", "Build/TreasureHunter_V1.0.json");
+		var gameInstance = UnityLoader.instantiate("gameContainer", "Build/TreasureHunter_V1.0(4).json");
 		var scaleToFit;
 		try {
 			scaleToFit = !!JSON.parse("");
@@ -32,8 +32,11 @@
 				}
 				h = Math.floor(w * r);
 			} else {
-				w = 720;
-				h = 1280;
+				<!-- w = 720; -->
+				<!-- h = 1280; -->
+				
+				w = window.innerWidth;
+				h = window.innerHeight;
 			}
 
 			container.style.width = canvas.style.width = w + "px";
